@@ -1,6 +1,6 @@
 /* style.css */
 body {
-    background-color: rgb(6, 26, 27);
+    background-color: #F5D100;
 }
 * {
     box-sizing: border-box;
@@ -11,32 +11,44 @@ body {
 }
 .container h1 {
     text-align: center;
-    color: white;
+    color: #0D0B00;
 }
 form {
-    background-color: white;
+    background-color: #FEFDFA;
     padding: 30px;
+    border-radius: 10px;
 }
+
 form .input-group {
     margin-bottom: 15px;
 }
 form label {
     display: block;
     margin-bottom: 10px;
+    color: #0D0B00;
 }
 form input {
     padding: 12px 20px;
     width: 100%;
     border: 1px solid #ccc;
 }
-.btn {
+
+.form {
+    margin-bottom: 15px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+.submit-btn {
     width: 100%;
     border: none;
-    background: rgb(37, 83, 3);
+    background: #0D0B00;
     font-size: 18px;
-    color: white;
+    color: #FEFDFA;
     border-radius: 3px;
     padding: 20px;
     text-align: center;
     margin-top: 10px;
 }
+

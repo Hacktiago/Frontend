@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi página web</title>
-    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>File Upload</h1>
-        <form id="form" enctype="multipart/form-data">
-            <div class="input-group">
-                <label for='name'>Your name</label>
-                <input name='name' id='name' placeholder="Enter your name" />
-            </div>
-            <div class="input-group">
-                <label for='files'>Select files</label>
-                <input id='files' type="file" multiple>
-            </div>
-            <button class="btn" type='submit'>Upload</button>
-        </form>
-        <h1>Archivos Cargados</h1>
-        <button id="getFilesBtn">Obtener Lista de Archivos</button>
-        <ul id="fileList"></ul>
+    <div class="background-shapes">
+        <div class="container">
+            <h1>Servicio de Parqueadero</h1>
+            <form id="form">
+                <div class="input-group">
+                    <label for="licensePlate">Placa</label>
+                    <input type="text" id="licensePlate" name="license_plate" placeholder="Ingrese la placa" required>
+                </div>
+                <div class="input-group">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" name="color" placeholder="Ingrese el color" required>
+                </div>
+                <div class="input-group">
+                    <label for="photo">Seleccionar foto</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <button class="submit-btn" type="submit" >Registrar Ingreso</button>
+            </form>
+            <button id="enviar-btn" > Enviar </button>
+        </div>
     </div>
     <script src='./script.js'></script>
 </body>
