@@ -7,6 +7,19 @@ enviarBtn.addEventListener('click', submitForm);
 removeBtn.addEventListener('click', removeCar);
 getCarsBtn.addEventListener('click', getCars);
 
+const url_input = document.getElementById('url_input');
+let url = '';
+
+const setUrlBtn = document.getElementById('set-url-btn');
+
+setUrlBtn.addEventListener('click', setUrl);
+
+function setUrl() {
+    url = url_input.value;
+    const success = document.getElementById('success-msg');
+    success.classList.remove('hidden');
+}
+
 function submitForm(e) {
     e.preventDefault();
     const licensePlate = document.getElementById("licensePlate");
@@ -17,7 +30,7 @@ function submitForm(e) {
     formData.append("color", color.value);
     formData.append("photo", photo.value);
 
-    fetch("http://localhost:3000/cars", {
+    fetch(url+"/cars", {
         method: 'POST',
         body: formData,
     })
@@ -27,7 +40,7 @@ function submitForm(e) {
 
 // script.js
 async function getCars() {
-    const response = await fetch('http://localhost:3000/cars');
+    const response = await fetch(url+"/cars");
     const carDescriptions = await response.json();
     const carsList = document.getElementById('carros');
     carDescriptions.forEach(car => {
@@ -60,7 +73,7 @@ function removeCar(e) {
         "license_plate": licensePlate.value
         }
     const requestJSON = JSON.stringify(request);
-    fetch("http://localhost:3000/cars", {
+    fetch(url+"/cars", {
         method: 'PATCH',
         body: requestJSON,
         headers: {
