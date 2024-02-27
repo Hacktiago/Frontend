@@ -12,6 +12,7 @@
             <h1>Servicio de Parqueadero</h1>
             <form id="form">
                 <div class="input-group">
+                    <h2>Registrar Vehiculo</h2>
                     <label for="licensePlate">Placa</label>
                     <input type="text" id="licensePlate" name="license_plate" placeholder="Ingrese la placa" required>
                 </div>
@@ -23,9 +24,22 @@
                     <label for="photo">Seleccionar foto</label>
                     <input type="file" id="photo" name="photo" accept="image/*" required>
                 </div>
-                <button class="submit-btn" type="submit" >Registrar Ingreso</button>
+                <button class="submit-btn" id="enviar-btn">Registrar Ingreso</button>
             </form>
-            <button id="enviar-btn" > Enviar </button>
+        </div>
+        <div class="container">
+            <form >
+                <div class="input-group">
+                    <h2>Retirar Vehiculo</h2>
+                    <label for="toRemovelicensePlate">Placa</label>
+                    <input type="text" id="toRemovelicensePlate" name="license_plate" placeholder="Ingrese la placa" required>
+                </div>
+                <button class="submit-btn" id="delete-car-btn">Retirar Vehiculo</button>
+            </form>
+        </div>
+        <div class="container">
+            <button id="get-cars-btn" class="submit-btn"> Listar Vehiculos </button>
+            <ul id="carros"></ul>
         </div>
     </div>
     <script src='./script.js'></script>
